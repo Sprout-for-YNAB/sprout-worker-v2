@@ -1,0 +1,26 @@
+name = "sprout-backend"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[vars]
+LEVEL = "local"
+VALID_ORIGINS = [
+  "chrome-extension://jhneablkhjnhpgijjoohbkabhhlfgnmi",
+  "chrome-extension://lbejkhdbpeikmgjemgjgbegombaddnij",
+]
+
+[env.staging.vars]
+LEVEL = "staging"
+VALID_ORIGINS = [
+  "chrome-extension://jhneablkhjnhpgijjoohbkabhhlfgnmi",
+  "chrome-extension://lbejkhdbpeikmgjemgjgbegombaddnij",
+  "chrome-extension://jhneablkhjnhpgijjoohbkabhhlfgnmi/"
+]
+
+[env.production.vars]
+LEVEL = "production"
+VALID_ORIGINS = [
+  "chrome-extension://npkgeinbpjppdllganpinoocipknmmnj",
+  "moz-extension://6a576b1c-2fee-4cca-8c58-b259bd4ce757",
+  "chrome-extension://ncbbbmjlonoacfomknfcdlmmdfohegah"
+]
